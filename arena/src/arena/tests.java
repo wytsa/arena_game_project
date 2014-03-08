@@ -7,20 +7,38 @@ import org.junit.Test;
 public class tests {
 
 	/*
-	 * testing of the basic Lifeform creation
+	 * testing of the basic Player creation
 	 */
 	@Test
-	public void test() {
-		Lifeform test = new Lifeform();
-		assertEquals("Strength must be 0", 0, test.strength);
-		assertEquals("Strength must be 0", 0, test.dex);
-		assertEquals("Strength must be 0", 0, test.con);
-		assertEquals("Strength must be 0", 0, test.body);
-		assertEquals("Strength must be 0", 0, test.intel);
-		assertEquals("Strength must be 0", 0, test.ego);
-		assertEquals("Strength must be 0", 0, test.strength);
-		assertEquals("Strength must be 0", 0, test.strength);
-		//test.printStats();
+	public void playerTest() {
+		Player test = new Player();
+		assertEquals("Strength must be 10", 10, test.strength);
+		assertEquals("Dex must be 10", 10, test.dex);
+		assertEquals("Con must be 10", 10, test.con);
+		assertEquals("Body must be 10", 10, test.body);
+		assertEquals("Intel must be 10", 10, test.intel);
+		assertEquals("Ego must be 10", 10, test.ego);
+		assertEquals("Preception must be 10", 10, test.prec);
+		assertEquals("Comliness must be 10", 10, test.com);
+		test.printStats();
+		//fail("Not yet implemented");
+	}
+	
+	/*
+	 * testing of the basic Player creation
+	 */
+	@Test
+	public void monsterTest() {
+		Monster test = new Monster();
+		assertEquals("Strength must be 10", 10, test.strength);
+		assertEquals("Dex must be 10", 10, test.dex);
+		assertEquals("Con must be 10", 10, test.con);
+		assertEquals("Body must be 10", 10, test.body);
+		assertEquals("Intel must be 10", 10, test.intel);
+		assertEquals("Ego must be 10", 10, test.ego);
+		assertEquals("Preception must be 10", 10, test.prec);
+		assertEquals("Comliness must be 10", 10, test.com);
+		test.printStats();
 		//fail("Not yet implemented");
 	}
 }
