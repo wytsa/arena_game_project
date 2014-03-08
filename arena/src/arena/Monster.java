@@ -1,23 +1,6 @@
 package arena;
 
-public class Monster implements MiscInterface{
-
-	//fields
-	public int strength;
-	public int dex;
-	public int con;
-	public int body;
-	public int intel;
-	public int ego;
-	public int prec;
-	public int com;
-	public int pd;
-	public int ed;
-	public int spd;
-	public int rec;
-	public int end;
-	public int stun;
-	public int physAtt;
+public class Monster extends Misc{
 	
 	public Monster(){
 		strength = 10;
@@ -31,12 +14,7 @@ public class Monster implements MiscInterface{
 		figuredStats();	
 	}
 
-	@Override
-	public void physicalAttack() {
-		physAtt = (strength / 5);		
-	}
-
-	public void printStats() {
+		public void printStats() {
 		System.out.println("Strength is " + strength);
 		System.out.println("Dexterity is " + dex);
 		System.out.println("Constitution is " + con);
@@ -51,15 +29,5 @@ public class Monster implements MiscInterface{
 		System.out.println("Recovery is " + rec);
 		System.out.println("Endurance is " + end);
 		System.out.println("Stun is " + stun);
-	}
-
-	@Override
-	public void figuredStats() {
-		pd = (strength / 5);
-		ed = (con / 5);
-		spd = (1 + (dex / 10));
-		rec = ((strength / 5) + (con / 5));
-		end = (con * 2);
-		stun = (body + (strength / 2) + (con / 2));
 	}
 }
